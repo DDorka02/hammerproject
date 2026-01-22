@@ -1,0 +1,44 @@
+.emelet div {
+  align-items: center;
+  margin: 2px;
+}
+
+img {
+  width: 100%;
+}
+
+.oszlop{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.oszlop2{
+  margin: 15px;
+}
+
+.oszlop2 > div{
+  width: 590.2645874023438;
+  height: 590.2645874023438;
+
+
+}
+
+
+.tomb{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+
+
+
+
+.kep4 { background-color: rgb(131, 0, 131);}
+
+
+
+
+
+
