@@ -1,5 +1,6 @@
 import "./Oldal.css";
-import Sor, { items } from "./Sor";
+import "./Item.css";
+import { items } from "./Item";
 
 const Oldal = () => {
   return (
@@ -10,13 +11,29 @@ const Oldal = () => {
         </div>
         
         {items.map((item, i) => (
-          <Sor 
+          <div
+            className={`grid-item grid-item--width${item.width} grid-item--height${item.height}`}
             key={i}
-            src={item.src}
-            col={item.col}
-            row={item.row}
-            fit={item.fit}
-          />
+          >
+            {item.type === "image" ? (
+              <img 
+                src={item.src} 
+                alt="" 
+              />
+            ) : (
+              <div className={`custom-content ${item.content.bgClass} layout-${item.content.layout} ${item.content.wide ? 'wide' : ''}`}>
+                <h2>{item.content.title}</h2>
+                {item.content.subtitle && <p>{item.content.subtitle}</p>}
+                {item.content.lines && (
+                  <div>
+                    {item.content.lines.map((line, idx) => (
+                      <p key={idx}>{line || '\u00A0'}</p>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
         ))}
       </div>
     </article>

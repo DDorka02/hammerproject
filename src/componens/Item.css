@@ -1,0 +1,157 @@
+.grid-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 5px solid rgb(0, 0, 0);
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.grid-item img.contain {
+  object-fit: contain;
+}
+
+.custom-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.custom-content.layout-center {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.custom-content.layout-left {
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.custom-content h2 {
+  font-size: 3rem;
+  margin: 0;
+  white-space: pre-line;  
+  font-weight: bold;
+}
+
+.custom-content p {
+  font-weight: bold;
+  font-size: x-large;
+  margin: 0;
+}
+
+.custom-content.bg-yellow p {
+  background-color: #e8ff00;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: bold;
+  margin: 0;
+}
+
+.custom-content.bg-purple p {
+  background-color: #6D6CAF;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: bold;
+  margin: 0;
+  color: #ffffff;
+}
+
+.custom-content.bg-darkblue p {
+  background-color: #0F0E54;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: bold;
+  margin: 0;
+  color: #ffffff;
+}
+
+.custom-content.bg-yellow {
+  background-color: #e8ff00;
+  color: #000;
+}
+
+.custom-content.bg-yellow h2{
+  background-color: #e8ff00;
+}
+
+.custom-content.bg-purple {
+  background-color:  #6D6CAF;
+  color: #ffffff;
+}
+
+.custom-content.bg-purple h2{
+  background-color:  #6D6CAF;
+}
+
+.custom-content.bg-darkblue {
+  background-color: #0F0E54;
+  color: #fffefe;
+}
+
+.custom-content.bg-darkblue h2{
+  background-color:  #0F0E54;
+}
+
+
+.grid-item--width1 { grid-column: span 1; }
+.grid-item--width2 { grid-column: span 2; }
+.grid-item--width3 { grid-column: span 3; }
+.grid-item--width4 { grid-column: span 4; }
+
+.grid-item--height1 { grid-row: span 1; }
+.grid-item--height2 { grid-row: span 2; }
+
+
+@media (max-width: 1024px) {
+  .grid-item {
+    border: 4px solid rgb(0, 0, 0);
+  }
+  
+  .custom-content h2 {
+    font-size: 2rem;
+  }
+  
+  .custom-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-item {
+    border: 3px solid rgb(0, 0, 0);
+  }
+  
+  .custom-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .custom-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-item {
+    border: 2px solid rgb(0, 0, 0);
+  }
+  
+  .custom-content h2 {
+    font-size: 1.2rem;
+  }
+  
+  .custom-content p {
+    font-size: 0.8rem;
+  }
+}
