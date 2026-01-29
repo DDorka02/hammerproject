@@ -1,19 +1,13 @@
-import "./Oldal.css";
-import "./Item.css";
 import { items } from "./Item";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+import "./Masik.css";
 
-
-const Oldal = () => {
-
+export default function Masik() {
   const navigate = useNavigate();
 
   return (
     <article className="main">
-      <div className="grid">
-        <div className="logo-overlay">
-          <img src="/kepek/logo.png" alt="Logo" />
-        </div>
+      <div className="grid2">
         
         {items.map((item, i) => (
           <div
@@ -68,6 +62,4 @@ const Oldal = () => {
       </div>
     </article>
   );
-};
-
-export default Oldal;
+}
