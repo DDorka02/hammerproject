@@ -1,7 +1,7 @@
 export const items = [
 {
   type: "custom", 
-  width: 3, 
+  width: 2, 
   height: 2,
   content: {
     title: "CONNECTING BRANDS\nACROSS CENTRAL EUROPE",
@@ -14,7 +14,7 @@ export const items = [
   
   { 
     type: "custom", 
-    width: 1, 
+    width: 2, 
     height: 1,
     content: {
       title: "START A\nPROJECT",
@@ -25,7 +25,7 @@ export const items = [
   
   { 
     type: "custom", 
-    width: 1, 
+    width: 2, 
     height: 1,
     content: {
       title: "SEE OUR\nWORK",
@@ -152,7 +152,7 @@ export const items = [
     }
   },
 
-  { src: "/kepek/map.png", width: 3, height: 2, type: "image" },
+  { src: "/kepek/map.png", width: 3, height: 2, type: "image", static: true },
 
   { 
     type: "custom", 
