@@ -98,7 +98,7 @@ export const items = [
   { src: "/kepek/cash.png", width: 1, height: 1, type: "image", overlay: "TESCO", subtitle: "SUBTITLE", link: "/masik" }, 
   { src: "/kepek/lelosi.png", width: 2, height: 1, type: "image", overlay: "LELOSI", subtitle: "SUBTITLE", link: "/masik" },
   { src: "/kepek/layers.png", width: 1, height: 1, type: "image", overlay: "DORTIE'S", subtitle: "SUBTITLE", link: "/masik" },
-  { src: "/kepek/dog.png", width: 1, height: 2, type: "image", overlay: "PET\nINDUSTRY", link: "/masik" }, 
+  { src: "/kepek/dog.png", width: 1, height: 2, type: "image", overlay: "PET\n", subtitle: "SUBTITLE", link: "/masik"}, 
   { src: "/kepek/breakfast.png", width: 2, height: 2, type: "image", overlay: "NESPRESSO", subtitle: "SUBTITLE", link: "/masik" },
 
   { 

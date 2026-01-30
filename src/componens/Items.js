@@ -8,7 +8,8 @@ export const item = [
     bgClass: "bg-darkblue",
     layout: "center",
     static: true,
-  }
+  },
+  link: "/"
 },
   
   { 
