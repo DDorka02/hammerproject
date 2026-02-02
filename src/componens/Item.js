@@ -2,7 +2,7 @@ export const items = [
 {
   type: "custom", 
   width: 2, 
-  height: 2,
+  height: 3,
   content: {
     title: "CONNECTING BRANDS\nACROSS CENTRAL EUROPE",
     subtitle: "FULL-SERVICE CREATIVE AND PRODUCTION WITH\nSTUDIOS IN BUDAPEST, PRAGUE AND BRATISLAVA,\nSERVING THE CE REGION",
@@ -15,7 +15,7 @@ export const items = [
   { 
     type: "custom", 
     width: 2, 
-    height: 1,
+    height: 2,
     content: {
       title: "START A\nPROJECT",
       bgClass: "bg-yellow",
