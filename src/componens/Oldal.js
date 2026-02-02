@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 
 const Oldal = () => {
   const navigate = useNavigate();
-  const [useMasonry, setUseMasonry] = useState(false);
+  const [useMasonry, setUseMasonry] = useState(true);
   const [langMenuOpen, setLangMenuOpen] = useState(false);
   const [navMenuOpen, setNavMenuOpen] = useState(false);
   const [navActivated, setNavActivated] = useState(false);
@@ -37,8 +37,8 @@ const Oldal = () => {
     { code: "SK", name: "SLOVAK" }
   ];
 
-  const fullWidthItems = useMasonry ? items.filter(item => item.width >= 4) : [];
-  const masonryItems = useMasonry ? items.filter(item => item.width < 4) : items;
+  // Changed: now shows all items on mobile, not filtering out width 4
+  const masonryItems = useMasonry ? items : items;
 
   const handleLanguageClick = () => {
     if (!navActivated) {
@@ -168,16 +168,11 @@ const Oldal = () => {
 
       {useMasonry ? (
         <>
-          {fullWidthItems.map((item, i) => (
-            <div key={`full-${i}`} className="full-width-item">
-              {renderItem(item, i)}
-            </div>
-          ))}
+
 
           <Masonry
             breakpointCols={breakpointColumnsObj}
             className="my-masonry-grid"
-            columnClassName="my-masonry-grid_column"
           >
             {masonryItems.map((item, i) => renderItem(item, i))}
           </Masonry>

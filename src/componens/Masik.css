@@ -7,7 +7,6 @@
   max-width: 1920px;
 }
 
-/* Grid layout for desktop */
 @media (min-width: 1025px) {
   .masik-grid {
     position: relative;
@@ -45,7 +44,6 @@
   }
 }
 
-/* Desktop - smaller (1025-1439px) */
 @media (min-width: 1025px) and (max-width: 1439px) {
   .masik-content h2 {
     font-size: 2rem;
@@ -60,7 +58,6 @@
   }
 }
 
-/* Desktop - larger (1440px+) */
 @media (min-width: 1440px) {
   .masik-item {
     min-height: 340px;
@@ -368,4 +365,93 @@
 
 .masik-item--h1.compact-item {
   min-height: 200px !important;
+}
+
+@media (min-width: 1025px) {
+  .masi-item--w1 { grid-column: span 1; }
+  .masi-item--w2 { grid-column: span 2; }
+  .masi-item--w3 { grid-column: span 3; }
+  .masi-item--w4 { grid-column: span 4; }
+  .masi-item--h1 { grid-row: span 1; }
+  .masi-item--h2 { grid-row: span 2; }
+  .masi-item--h3 { grid-row: span 3; }
+  .masi-item--h4 { grid-row: span 4; }
+  
+  .masik-item {
+    min-height: 300px;
+  }
+  
+  .masik-content {
+    padding: 28px;
+  }
+  
+  .masik-content h2 {
+    font-size: 2.2rem;
+    line-height: 1.1;
+  }
+  
+  .masik-content p {
+    font-size: 0.85rem;
+    line-height: 1.35;
+  }
+  
+  .masik-content.compact h2 {
+    font-size: 1.7rem;
+    line-height: 1.15;
+  }
+}
+
+@media (max-width: 1024px) {
+  .masik-masonry-grid {
+    display: flex;
+    gap: 0;
+  }
+
+  .masik-masonry_column {
+    flex: 1;
+  }
+
+  .grid {
+    display: block !important;
+  }
+
+  .masik-masonry .grid-item {
+    width: 100% !important;
+    float: left;
+    border: 4px solid rgb(0, 0, 0);
+  }
+  
+  .masi-item--h1 { height: 240px; }
+  .masi-item--h2 { height: 480px; }
+  .masi-item--h3 { height: 720px; }
+  .masi-item--h4 { height: 960px; }
+}
+
+@media (max-width: 768px){
+  .masik-masonry .masik-item {
+    border: 3px solid rgb(0, 0, 0);
+  }
+  
+  .masi-item--h1 { height: 220px; }
+  .masi-item--h2 { height: 440px; }
+  .masi-item--h3 { height: 660px; }
+  .masi-item--h4 { height: 880px; }
+  
+  .masik-content {
+    padding: 18px;
+  }
+  
+  .masik-content h2 {
+    font-size: 1.7rem;
+    line-height: 1.1;
+  }
+  
+  .masik-content.compact h2 {
+    font-size: 1.35rem;
+  }
+  
+  .masik-content p {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
 }

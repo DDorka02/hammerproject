@@ -245,18 +245,11 @@
 }
 
 @media (max-width: 1024px) {
-  .main {
-    padding-top: 0;
-  }
+
   
   .my-masonry-grid {
     display: flex;
     margin-left: 0;
-  }
-
-  .my-masonry-grid_column {
-    padding-left: 0;
-    background-clip: padding-box;
   }
 
   .nav-list {
