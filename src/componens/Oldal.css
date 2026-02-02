@@ -294,6 +294,11 @@
     padding: 30px;
   }
 
+  .lang-trigger {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
   .lang-list li {
     font-size: 1.8rem;
   }
@@ -336,8 +341,8 @@
   }
 
   .lang-trigger {
-    font-size: 1rem;
-    padding: 8px 12px;
+    font-size: 11px;
+    padding: 4px 6px;
   }
 
   .hamburger-btn {

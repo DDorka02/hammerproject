@@ -1,0 +1,371 @@
+.masik-main {
+  width: 100%;
+  background-color: #000;
+  min-height: 100vh;
+  padding: 10px;
+  position: relative;
+  max-width: 1920px;
+}
+
+/* Grid layout for desktop */
+@media (min-width: 1025px) {
+  .masik-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px;
+    width: 100%;
+  }
+  
+  .masik-main {
+    padding: 12px;
+  }
+
+  .masik-item {
+    min-height: 300px;
+  }
+
+  .masik-content {
+    padding: 28px;
+  }
+
+  .masik-content h2 {
+    font-size: 2.2rem;
+    line-height: 1.1;
+  }
+
+  .masik-content p {
+    font-size: 0.85rem;
+    line-height: 1.35;
+  }
+
+  .masik-content.compact h2 {
+    font-size: 1.7rem;
+    line-height: 1.15;
+  }
+}
+
+/* Desktop - smaller (1025-1439px) */
+@media (min-width: 1025px) and (max-width: 1439px) {
+  .masik-content h2 {
+    font-size: 2rem;
+  }
+  
+  .masik-content p {
+    font-size: 0.8rem;
+  }
+  
+  .masik-content.compact h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Desktop - larger (1440px+) */
+@media (min-width: 1440px) {
+  .masik-item {
+    min-height: 340px;
+  }
+  
+  .masik-content {
+    padding: 32px;
+  }
+  
+  .masik-content h2 {
+    font-size: 2.5rem;
+  }
+  
+  .masik-content p {
+    font-size: 0.95rem;
+  }
+  
+  .masik-content.compact h2 {
+    font-size: 1.9rem;
+  }
+}
+
+/* Masonry layout for tablet and mobile */
+@media (max-width: 1024px) {
+  .masik-main {
+    padding-top: 0;
+  }
+  
+  .masik-masonry {
+    display: flex;
+    gap: 0;
+    margin-left: 0;
+  }
+
+  .masik-masonry-column {
+    flex: 1;
+    padding-left: 0;
+    background-clip: padding-box;
+  }
+
+  .masik-grid {
+    display: block !important;
+  }
+
+  .masik-masonry .masik-item {
+    width: 100% !important;
+    border: 4px solid rgb(0, 0, 0);
+  }
+  
+  .masik-item--h1 { height: 240px; }
+  .masik-item--h2 { height: 480px; }
+  .masik-item--h3 { height: 720px; }
+  .masik-item--h4 { height: 960px; }
+  
+  .masik-content {
+    padding: 22px;
+  }
+  
+  .masik-content h2 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+  
+  .masik-content.compact h2 {
+    font-size: 1.6rem;
+  }
+  
+  .masik-content p {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+  
+  .compact-item {
+    min-height: 180px !important;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 481px) {
+  .masik-masonry .masik-item {
+    border: 3px solid rgb(0, 0, 0);
+  }
+  
+  .masik-item--h1 { height: 220px; }
+  .masik-item--h2 { height: 440px; }
+  .masik-item--h3 { height: 660px; }
+  .masik-item--h4 { height: 880px; }
+  
+  .masik-content {
+    padding: 18px;
+  }
+  
+  .masik-content h2 {
+    font-size: 1.7rem;
+    line-height: 1.1;
+  }
+  
+  .masik-content.compact h2 {
+    font-size: 1.35rem;
+  }
+  
+  .masik-content p {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+  
+  .compact-item {
+    min-height: 150px !important;
+  }
+
+  .masik-main {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .masik-masonry .masik-item {
+    border: 2px solid rgb(0, 0, 0);
+  }
+  
+  .masik-item--h1 { height: 180px; }
+  .masik-item--h2 { height: 360px; }
+  .masik-item--h3 { height: 540px; }
+  .masik-item--h4 { height: 720px; }
+  
+  .masik-content {
+    padding: 15px;
+  }
+  
+  .masik-content h2 {
+    font-size: 1.35rem;
+    line-height: 1.15;
+  }
+  
+  .masik-content.compact h2 {
+    font-size: 1.05rem;
+  }
+  
+  .masik-content p {
+    font-size: 0.72rem;
+    line-height: 1.3;
+  }
+  
+  .compact-item {
+    min-height: 120px !important;
+  }
+
+  .masik-main {
+    padding: 4px;
+  }
+}
+
+@media (max-width: 360px) {
+  .masik-item--h1 { height: 180px; }
+  .masik-item--h2 { height: 360px; }
+  .masik-item--h3 { height: 540px; }
+  .masik-item--h4 { height: 720px; }
+  
+  .masik-content {
+    padding: 12px;
+  }
+  
+  .masik-content h2 {
+    font-size: 1.2rem;
+  }
+  
+  .masik-content.compact h2 {
+    font-size: 0.95rem;
+  }
+  
+  .masik-content p {
+    font-size: 0.7rem;
+  }
+  
+  .compact-item {
+    min-height: 100px !important;
+  }
+}
+
+/* Item base styles */
+.masik-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 5px solid rgb(0, 0, 0);
+  min-height: 200px;
+}
+
+.masik-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Grid spans for desktop */
+@media (min-width: 1025px) {
+  .masik-item--w1 { grid-column: span 1; }
+  .masik-item--w2 { grid-column: span 2; }
+  .masik-item--w3 { grid-column: span 3; }
+  .masik-item--w4 { grid-column: span 4; }
+  
+  .masik-item--h1 { grid-row: span 1; }
+  .masik-item--h2 { grid-row: span 2; }
+  .masik-item--h3 { grid-row: span 3; }
+  .masik-item--h4 { grid-row: span 4; }
+}
+
+/* Content styles */
+.masik-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.masik-content.layout-center {
+  justify-content: center;
+  text-align: center;
+}
+
+.masik-content.layout-left {
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.masik-content h2 {
+  font-size: 2.4rem;
+  margin: 0;
+  white-space: pre-line;
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.masik-content p {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0;
+  white-space: pre-line;
+  line-height: 1.3;
+}
+
+/* Background colors */
+.masik-content.bg-yellow {
+  background-color: #e8ff00;
+  color: #000;
+}
+
+.masik-content.bg-yellow h2 {
+  background-color: #e8ff00;
+}
+
+.masik-content.bg-yellow p {
+  background-color: #e8ff00;
+  font-weight: 600;
+  padding: 8px 12px;
+  display: inline-block;
+}
+
+.masik-content.bg-purple {
+  background-color: #6D6CAF;
+  color: #ffffff;
+}
+
+.masik-content.bg-purple h2 {
+  background-color: #6D6CAF;
+}
+
+.masik-content.bg-purple p {
+  background-color: #6D6CAF;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.masik-content.bg-darkblue {
+  background-color: #0F0E54;
+  color: #fffefe;
+}
+
+.masik-content.bg-darkblue h2 {
+  background-color: transparent;
+}
+
+.masik-content.bg-darkblue p {
+  background-color: transparent;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Compact variant */
+.masik-content.compact h2 {
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+}
+
+.compact-item {
+  min-height: 200px !important;
+}
+
+.masik-item--h1.compact-item {
+  min-height: 200px !important;
+}

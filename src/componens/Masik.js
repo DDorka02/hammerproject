@@ -1,9 +1,8 @@
 import { item } from "./Items";
-import "./Oldal.css";
-import "./Item.css";
+import "./Masik.css";
 import { useNavigate } from "react-router-dom";
-import Masonry from 'react-masonry-css';
-import { useState, useEffect } from 'react';
+import Masonry from "react-masonry-css";
+import { useState, useEffect } from "react";
 
 export default function Masik() {
   const navigate = useNavigate();
@@ -15,8 +14,8 @@ export default function Masik() {
     };
 
     checkWidth();
-    window.addEventListener('resize', checkWidth);
-    return () => window.removeEventListener('resize', checkWidth);
+    window.addEventListener("resize", checkWidth);
+    return () => window.removeEventListener("resize", checkWidth);
   }, []);
 
   const breakpointColumnsObj = {
@@ -25,41 +24,46 @@ export default function Masik() {
     480: 2
   };
 
-  const renderItems = () => (
-    item.map((item, i) => (
-      <div 
-        className={`grid-item grid-item--width${item.width} grid-item--height${item.height} ${item.content?.compact ? 'compact-item' : ''}`} 
-        key={i}
-        onClick={() => item.link && navigate(item.link)}
-        style={{ cursor: item.link ? "pointer" : "default" }}
-      >
-        {item.type === "image" ? (
-          <div>
-            <img src={item.src} alt="" />
-          </div>
-        ) : (
-          <div className={`custom-content ${item.content.bgClass} layout-${item.content.layout} ${item.content.static ? 'is-static' : ''}`}>
-            <h2>{item.content.title}</h2>
-            {item.content.subtitle && <p>{item.content.subtitle}</p>}
-          </div>
-        )}
-      </div>
-    ))
+  const renderItem = (itm, i) => (
+    <div
+      key={i}
+      className={`masik-item masik-item--w${itm.width} masik-item--h${itm.height} ${itm.content?.compact ? 'compact-item' : ''}`}
+      onClick={() => itm.link && navigate(itm.link)}
+      style={{ cursor: itm.link ? "pointer" : "default" }}
+    >
+      {itm.type === "image" ? (
+        <img src={itm.src} alt="" />
+      ) : (
+        <div
+          className={`masik-content ${itm.content.bgClass} layout-${itm.content.layout} ${itm.content.compact ? 'compact' : ''}`}
+        >
+          <h2>{itm.content.title}</h2>
+          {itm.content.subtitle && <p>{itm.content.subtitle}</p>}
+          {itm.content.lines && (
+            <div>
+              {itm.content.lines.map((line, idx) => (
+                <p key={idx}>{line || '\u00A0'}</p>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
   );
 
   return (
-    <article className="main">
+    <article className="masik-main">
       {useMasonry ? (
         <Masonry
           breakpointCols={breakpointColumnsObj}
-          className="my-masonry-grid"
-          columnClassName="my-masonry-grid_column"
+          className="masik-masonry"
+          columnClassName="masik-masonry-column"
         >
-          {renderItems()}
+          {item.map((itm, i) => renderItem(itm, i))}
         </Masonry>
       ) : (
-        <div className="grid">
-          {renderItems()}
+        <div className="masik-grid">
+          {item.map((itm, i) => renderItem(itm, i))}
         </div>
       )}
     </article>
